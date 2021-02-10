@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            font-family: 'Poppins', sans-serif;
+            color: #14142B;
+            background-color: #EFF0F6;
+        }
+        .contents {
+            display: flex;
+            padding: 70px 100px;
+            min-width: 450px;
+            max-width: 700px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color:#fff;
+            border-radius: 24px;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        span { 
+            margin-bottom: 20px;    
+            font-size: 72px;
+            color: #ED2E7E;
+        }
+        button {
+            padding: 15px 30px;
+            font-family: inherit;
+            font-weight: 600;
+            color: #FCFCFC;
+            background-color: #5F2EEA;
+            border: none;
+            border-radius: 40px;
+            cursor: pointer;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="contents">
+        <h1>
+            COUNTER
+        </h1>
+        <span>
+            0
+        </span>
+        <div class="buttonGroup">
+            <button>LOWER COUNT</button>
+            <button>ADD COUNT</button>
+        </div>
+    </div>
+    <script>
+        const result = document.querySelector("span");
+        const btn = document.querySelectorAll("button");
+
+        let num = 0;
+
+        function printNum(num) {
+            result.innerHTML = num;
+        }
+
+        btn[0].addEventListener("click", () => {
+            --num;
+            printNum(num)
+        });
+
+        btn[1].addEventListener("click", () => {
+            ++num;
+            printNum(num)
+        });
+    </script>
+</body>
+</html>
