@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            font-family: 'Poppins', sans-serif;
+            color: #14142B;
+            background-color: #EFF0F6;
+        }
+        .contents {
+            display: flex;
+            padding: 70px 100px;
+            min-width: 450px;
+            max-width: 700px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color:#fff;
+            border-radius: 24px;
+        }
+        button {
+            margin-bottom: 20px;
+            padding: 15px 30px;
+            font-size: 16px;
+            font-family: inherit;
+            font-weight: 600;
+            color: #FCFCFC;
+            background-color: #5F2EEA;
+            border: none;
+            border-radius: 40px;
+            cursor: pointer;
+            outline: none;
+        }
+        button:hover {
+            background-color: #2A00A2;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        input {
+            margin-bottom: 20px;
+            padding: 12px 24px;
+            border: 2px solid #14142B;
+            border-radius: 16px;
+            outline: none;
+        }
+        p {
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+        p.cloorBlue {
+            color: #2A00A2;
+            font-weight: 700;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contents">
+        <h2>A Messge You Would Like To Pass</h3>
+        <input type="text">
+        <button>Submit</button>
+        <p class="result">Last Message Delivered</p>
+        <p class="cloorBlue">DO THIS PROJECT!</p>
+    </div>
+    <script>
+        const userInputText = document.querySelector("input");
+        const btn = document.querySelector("button");
+        const result = document.querySelector(".result");
+
+        btn.addEventListener("click", () => {
+            result.innerHTML = userInputText.value;
+        })
+
+    </script>
+</body>
+</html>
