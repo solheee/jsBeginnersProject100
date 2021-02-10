@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+    <script src="https://kit.fontawesome.com/57dc925260.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            font-family: 'Poppins', sans-serif;
+            color: #14142B;
+            background-color: #EFF0F6;
+        }
+        .contents {
+            display: flex;
+            padding: 96px 128px;
+            min-width: 450px;
+            max-width: 700px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color:#fff;
+            border-radius: 24px;
+        }
+        button {
+            padding: 15px 30px;
+            font-family: inherit;
+            font-weight: 600;
+            color: #FCFCFC;
+            background-color: #5F2EEA;
+            border: none;
+            border-radius: 40px;
+            margin-bottom: 50px;
+            cursor: pointer;
+            outline: none;
+        }
+        button:hover {
+            background-color: #2A00A2;
+        }
+        .text i {
+            margin-right: 10px;
+            float: left;
+            font-size: 32px;
+            color: #6E7191;
+        }
+        .text .quote {
+            margin-top: 12px;
+            font-size: 18px;
+            word-break: keep-all;
+        }
+        .text .park {
+            text-align: end;
+            font-size: 18px;
+            font-weight: 600;
+            color: #5F2EEA;
+        }
+    </style>
+</head>
+<body>
+    <div class="contents">
+        <button>Generate Quote</button>
+        <div class="text">
+            <i class="fas fa-quote-left"></i>
+            <p class="quote">
+                세 번 참으면 호구 된다
+            </p>
+            <p class="park">박명수</p>
+        </div>
+    </div>
+    <script>
+        const btn = document.querySelector("button");
+        const quote = document.querySelector(".quote");
+        const parkNickName = document.querySelector(".park");
+
+        const quoteList = [
+            {
+                name: "박명수",
+                quote: "세 번 참으면 호구 된다"
+            },
+            {   
+                name: "거성",
+                quote: "늦었다고 생각할 때가 정말 늦은 때다"
+            },
+            {
+                name: "흑채",
+                quote: "지금 공부 안하면 더울 때 더운데서 일하고 추울 때 추운데서 일한다"
+            },
+            {
+                name: "까스박명수",
+                quote: "개천에서 용 난 사람 만나면 개천으로 빨려 들어간다"
+            },
+            {
+                name: "고유명수",
+                quote: "나까지 나설 필요는 없다"
+            },
+            {
+                name: "그레이트박",
+                quote: "감사의 표시는 돈으로 하라"
+            },
+            {
+                name: "대머리 독수리",
+                quote: "티끌 모아 티끌"
+            },
+            {
+                name: "살쾡이",
+                quote: "죽음과 결혼은 뒤로 미룰수록 좋다"
+            },
+            {
+                name: "미중년",
+                quote: "일찍 일어나는 새가 피곤하다"
+            },
+            {
+                name: "바다의 왕자",
+                quote: "원수는 직장에서 만난다"
+            },
+            {
+                name: "하찮은",
+                quote: "노력하지 않는 자는 기회조차 안 옵니다"
+            },
+        ]
+
+        btn.addEventListener("click", () => {
+            let index = quoteList[Math.floor(Math.random() * 11)];
+
+
+            quote.innerHTML = index.quote;
+            parkNickName.innerHTML = index.name;
+        })
+    </script>
+</body>
+</html>
